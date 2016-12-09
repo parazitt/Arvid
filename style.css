@@ -179,18 +179,25 @@ body {
   color: #ffffff;
   font-family: yekan, tahoma, arial;
   font-size: 83px;
+  text-shadow: 1px 1px 5px #222;
 }
 .domain ul {
-  margin-top: 7px;
+  margin-top: 12px;
   list-style: none;
-  width: 50%;
-  height: 45px;
+  width: 95%;
+  height: 82px;
 }
 .domain ul li {
   float: right;
   color: #ffffff;
   text-align: center;
   width: 25%;
+}
+.domain ul strong {
+  font-size: 30px;
+}
+.domain ul p {
+  font-size: 20px;
 }
 .domain .domainSearch {
   float: right;
@@ -450,6 +457,7 @@ body {
 .customer h3 {
   font-size: 29px;
   color: #535353;
+  margin: 0;
   text-align: center;
 }
 .customer h3:after {
