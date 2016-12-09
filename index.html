@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="IE=edge" http-equiv=X-UA-Compatible>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Arvid</title>
+        <script src="bootstrap/js/jquery.min.js" type="text/javascript"></script>
+        <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="js/jquery.smoove.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/raphael.js"></script>
+        <script type="text/javascript" src="js/livicons.min.js"></script>
+        <script>
+            function resized(){
+                var x = jQuery(".pelanHeads .item");
+                jQuery(".pelanItems").each(function() {
+                    var i = 0;
+                    jQuery(".pelanItems .item").css({'height': 'auto'})
+                        jQuery(".pelanHeads .item").css({'height': 'auto'})
+                    if(window.innerWidth<=767){
+                        return true
+                    }
+                    jQuery(this).find(".item").each(function(){
+                        def = Math.abs(parseInt(jQuery(this).css('height'))-parseInt(jQuery(x[i]).css('height')));
+                        if(def>5){
+                            if(jQuery(this).css('height')>jQuery(x[i]).css('height')){
+                                jQuery(x[i]).css({'height': jQuery(this).css('height')});
+                                jQuery(".pelanItems .item:nth-child("+(i+1)+")").css({'height': jQuery(this).css('height')});
+                            }else{
+                                jQuery(this).css({'height': jQuery(x[i]).css('height')});
+                                jQuery(".pelanItems .item:nth-child("+(i+1)+")").css({'height': jQuery(x[i]).css('height')});
+                            }
+                        }
+
+                        i++;
+                    });
+                });
+            }
+            jQuery(document).ready(function($){
+                resized();
+                $('#myTabs a').click(function (e) {
+                    e.preventDefault()
+                    $(this).tab('show')
+                }); 
+                $('.rocket img').smoove({offset:'40%'});
+                $("#linuxplus").hover(function(){
+                    var t = $(this).attr('src')
+                    $(this).attr('src', $(this).attr('data-h'))
+                    $(this).attr('data-h', t)
+                });
+            });
+            jQuery(window).resize(resized);
+
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid redNav">
+            <div class="item" id="iregister">ثبت نام</div>
+            <div class="item" id="ilogin">ورود</div>
+            <div class="item pull-left" id="isupport">پشتیبانی</div>
+            <div class="item pull-left" id="imail">تماس با ما</div>
+            <div class="item pull-left" id="iphone">+۹۸ ۹۱۶ ۸۵۰ ۱۵۴۶</div>
+            <div class="clearfix"></div>
+        </div>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"  type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"class="sr-only">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>            
+                    <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="images/arvidlogo.png">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">گروه آروید </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Arvid</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">طراحی سایت </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">میزبانی وب </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">دامنه </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">سامانه پیامکی </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">نمایندگی هاست ایران</a></li>
+                        <li><a href="#">آموزش</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section class="services">
+            <div class="fContainer">
+                <img src="images/arvid1.jpg"/>
+                <img src="images/wp.jpg"/>
+            </div>
+        </section>
+        <section class="wordpress">
+            <div class="container">
+                <div class="col-sm-8 col-xs-12">
+                    <h3>طراحی سایت وردپرس</h3>
+                    <p>بدون شک می توان گفت بیش از 90 درصد سایت های دانلودی، خبری و تفریحی در ایران از سیستم مدیریت محتوای وردپرس استفاده می کنند. این سیستم مدیریت محتوای رایگان قابلیت های بسیاری را در اختیار وبمسترها قرار می دهد که یکی از آنها، امکان طراحی قالب سایت بدون از دست دادن امکانات جانبی این سیستم می باشد. ما با استفاده از تکنولوژی های روز دنیا از قبیل jQuery، CSS3، HTML5 و غیره می توانیم قالب هایی واکنش گرا (Responsive) برای شما طراحی کنیم که علاوه بر حفظ تمامی امکانات وردپرس، خواسته ها و نیازهای شما را نیز شامل شود. </p>
+                    
+                </div>
+                <div class="col-sm-4 col-xs-6 pull-left fContainer">
+                    <img src="images/computer.png" />
+                </div>
+                <div class="col-sm-8 col-xs-6 pull-left">
+                    <ul class="colorButton">
+                        <li>
+                            <i id="livicon-1" class="livicon" data-s="24" data-hc="white" data-c="white" data-n="desktop"><a href="#">سفارش طراحی</a></i>
+                        </li>
+                        <li>
+                            <i id="livicon-red" class="livicon" data-s="24" data-hc="white" data-c="white" data-n="desktop"><a href="#">برآورد هزینه</a></i>
+                        </li>
+                        <li>
+                            <i id="livicon-orange" class="livicon" data-s="24" data-hc="white" data-c="white" data-n="desktop"><a href="#">نمونه کارها</a></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container livicons">
+                <div class="col-xs-3">
+                    <div class="item">
+                        <div class="livicon" id="livicon-wp" data-name="wordpress" data-c="#CB0003" data-hc="#e59999" data-size="70" style="padding:15px 27px 0;"></div>
+                        <h3>طراحی سایت با وردپرس</h3>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="item">
+                        <div class="livicon" id="livicon-dp" data-name="desktop" data-c="#CB0003" data-hc="#CB0003" data-size="70" style="padding:15px 27px 0;"></div>
+                        <h3>طراحی قالب وردپرس</h3>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="item">
+                        <div class="livicon" id="livicon-ft" data-name="font" data-c="#CB0003" data-hc="#CB0003" data-size="70" style="padding:15px 27px 0;"></div>
+                        <h3>فارسی سازی قالب وردپرس</h3>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="item">
+                        <div class="livicon" id="livicon-im" data-name="image" data-c="#CB0003" data-hc="#CB0003" data-size="70" style="padding:15px 27px 0;"></div>
+                        <h3>تبدیل PSD به وردپرس</h3>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="item">
+                        <div class="livicon" id="livicon-cd" data-name="code" data-c="#CB0003" data-hc="#CB0003" data-size="70" style="padding:15px 27px 0;"></div>
+                        <h3>تبدیل HTML به وردپرس</h3>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="item">
+                        <div class="livicon" id="livicon-ht" data-name="html5" data-c="#CB0003" data-hc="#CB0003" data-size="70" style="padding:15px 27px 0;"></div>
+                        <h3>تبدیل PSD به HTML</h3>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="item">
+                        <div class="livicon" id="livicon-gr" data-name="gears" data-c="#CB0003" data-hc="#CB0003" data-size="70" style="padding:15px 27px 0;"></div>
+                        <h3>نوشتن افزونه وردپرس</h3>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="item">
+                        <div class="livicon" id="livicon-resp" data-name="responsive" data-c="#CB0003" data-hc="#CB0003" data-size="70" style="padding:15px 27px 0;"></div>
+                        <h3>تبدیل قالب ساده به واکنشگرا</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hosting">
+            <div class="fContainer grayBorder">
+                <div class="container"><h2>خدمات میزبانی وب</h2></div>
+            </div>
+            <div class="hosingTabs">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">هاست لینوکس ایران</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">هاست ویژه لینوکس ایران</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">نمایندگی هاست ایران</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="home">
+                        <div class="redLinux">
+                            <div class="container">
+                                <img src="images/linux.png"  id="linuxplus" data-h="images/linuxplus.png" class="pull-left" />
+                                <p>سرویس هاست لینوکس معمولی جهت ارائه خدمات به وب سایت هایی با بازدید و مصرف معمولی از منابع سرور است که کدنویسی و برنامه نویسی آن بر پایه سیستم عامل لینوکس و با زبان های برنامه نویسی php یا CGI یا پرل و ... می باشد. البته هاست لینوکس بدین معناست که فقط سیستم عامل نصب شده، روی سرور لینوکس است و هیچ ارتباطی با سیستم عامل کامپیوتر شخصی شما ندارد و چنانچه روی کامپیوتر شما ویندوز نصب باشد به راحتی می توانید از هاست لینوکس استفاده کنید. سرورهای این نوع سرویس، همگی در بستر شبکه ای دیتاسنتر هاست ایران در داخل ایران میزبانی می شوند و از کنترل پنل DirectAdmin در ایران استفاده می کند و وب سرویس آن آپاچی می باشد.</p>
+                            </div>
+                        </div>
+                        <div class="pelans clouds">
+                            <div class="container">
+                                <div class="pelanHeads">
+                                    <div class="item">&nbsp;</div>
+                                    <div class="item">فضا</div>
+                                    <div class="item">پهنای باند</div>
+                                    <div class="item">افزودن دامنه</div>
+                                    <div class="item">هزینه سه ماهه</div>
+                                    <div class="item">هزینه یک ساله</div>
+                                    <div class="item">foo</div>
+                                </div>
+                                <div class="pelanItems">
+                                    <div class="item">پلن ۱</div>
+                                    <div class="item">100 مگابایت</div>
+                                    <div class="item">5 گیگ</div>
+                                    <div class="item">×</div>
+                                    <div class="item">×</div>
+                                    <div class="item">300،000 ﷼</div>
+                                    <div class="item">foo</div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div class="pelanItems">
+                                    <div class="item">پلن ۱</div>
+                                    <div class="item">100 مگابایت</div>
+                                    <div class="item">5 گیگ</div>
+                                    <div class="item">×</div>
+                                    <div class="item">×</div>
+                                    <div class="item">300،000 ﷼</div>
+                                    <div class="item">foo</div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div class="pelanItems">
+                                    <div class="item">پلن ۱</div>
+                                    <div class="item">100 مگابایت</div>
+                                    <div class="item">5 گیگ</div>
+                                    <div class="item">×</div>
+                                    <div class="item">×</div>
+                                    <div class="item">300،000 ﷼</div>
+                                    <div class="item">foo</div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div class="pelanItems">
+                                    <div class="item">پلن ۱</div>
+                                    <div class="item">100 مگابایت</div>
+                                    <div class="item">5 گیگ</div>
+                                    <div class="item">×</div>
+                                    <div class="item">×</div>
+                                    <div class="item">300،000 ﷼</div>
+                                    <div class="item">foo</div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div class="pelanItems">
+                                    <div class="item">پلن ۱</div>
+                                    <div class="item">100 مگابایت</div>
+                                    <div class="item">5 گیگ</div>
+                                    <div class="item">×</div>
+                                    <div class="item">×</div>
+                                    <div class="item">300،000 ﷼</div>
+                                    <div class="item">foo</div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                <div class="pelanItems">
+                                    <div class="item">پلن ۱</div>
+                                    <div class="item">100 مگابایت</div>
+                                    <div class="item">5 گیگ</div>
+                                    <div class="item">×</div>
+                                    <div class="item">×</div>
+                                    <div class="item">300،000 ﷼</div>
+                                    <div class="item">foo</div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="profile">...1111</div>
+                    <div role="tabpanel" class="tab-pane fade" id="messages">...33333</div>
+                    <div role="tabpanel" class="tab-pane fade" id="settings">...444444</div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="domain">
+            <div class="fContainer grayBorder">
+                <div class="container">
+                    <h2>خدمات میزبانی وب</h2>
+                    <ul>
+                        <li><strong>.org</strong><p>45000 تومان</p></li>
+                        <li><strong>.org</strong><p>45000 تومان</p></li>
+                        <li><strong>.org</strong><p>45000 تومان</p></li>
+                        <li><strong>.org</strong><p>45000 تومان</p></li>
+                    </ul>
+                    <div class="domainSearch">
+                    <form>
+                        <input type="text" class="dname" name="dname" placeholder="نام دامنه را وارد کنید">
+                        <select class="dtype" name="dtype"><option value=".com">.com</option><option value=".ir">.ir</option><option value=".co">.co</option><option value=".net">.net</option><option value=".org">.org</option><option value=".info">.info</option><option value=".me">.me</option><option value=".in">.in</option><option value=".biz">.biz</option><option value=".xyz">.xyz</option> </select>
+                        <input type="submit" value="بررسی" class="submit" id="searchsubmit">
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sms">
+            <div class="container">
+                <div class="col-sm-4 col-xs-12"><h2>سامانه پیامکی</h2></div>
+                <div class="buttons col-lg-5 col-sm-6 col-sm-offset-2 col-xs-12">
+                    <ul class="colorButton">
+                        <li><a href="#">مشاهده پلن‌ها</a></li>
+                        <li><a href="#">تعرفه خطوط</a></li>
+                        <li><a href="#">اعطای نمایندگی</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-sm-4 col-xs-12"><p>سامانه پیام کوتاه آروید، سیستمی کاملا تحت وب است که از طریق محیطی بسیار ساده و کاربرپسند، بدون هیچ گونه سخت افزار جانبی، از هرنقطه‌ی دنیا با اتصال به اینترنت می توانید با شماره‌های اختصاصی 1000 و 2000 و 3000 و5000 و 021 اقدام به ارسال و دریافت پیام کوتاه به صورت تکی و گروهی و انبوه نمایید.این سامانه دارای پکیج های مختلفی می باشد که بسته به نیاز خود میتوانید یکی از پکیج ها را انتخاب نموده و مراحل سفارش را تکمیل نمایید.ظرف کمتر از 15دقیقه پنل به همراه شماره‌ی اختصاصی شما آماده استفاده خواهد بود .</p></div>
+                <div class="col-sm-4 col-xs-12"><p>
+                    <h4>ویژگی ها:</h4>
+                    <ol>
+                        <li>محیطی ساده و کاربر پسند و کاملا فارسی</li>
+                        <li>امکان ارسال و دریافت پیامک به صورت نامحدود و گزارش گیری دقیق</li>
+                        <li>قابلیت استفاده از چندین شماره به صورت همزمان در یک پنل</li>
+                        <li>امکان ذخیره سازی پیامک های ارسالی و دریافتی بدون محدیدیت</li>
+                        <li>حذف اتوماتیک شماره های تکراری</li>
+                        <li>امکان بارگزاری فایل اکسل و متنی )txt(برای مخاطبین</li>
+                        
+                    </ol>
+                    </p></div>
+                <div class="col-sm-4 visible-lg rocket"><img  data-move-y="500px" data-move-x="500px" src="images/missle.png" /></div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="fContainer grayBorder">
+                <img src="images/project.jpg" />
+                <div class="projects">
+                    <div class="cel">
+                        <h3>تعداد کل مشتریان</h3>
+                        <h4>۹۶</h4>
+                    </div>
+                    <div class="cel">
+                        <h3>پروژه های انجام شده</h3>
+                        <h4>۱۵۴</h4>
+                    </div>
+                <div>
+            </div>
+        </section>
+        <section class="education">
+            <h3>واحد آمورش</h3>
+            <div class="fContainer">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs col-md-2 pull-right" role="tablist">
+                    <li role="presentation" class="active"><a href="#domainHelp" aria-controls="domainHelp" role="tab" data-toggle="tab">راهنمای ثبت دامنه</a></li>
+                    <li role="presentation"><a href="#wpHelp" aria-controls="wpHelp" role="tab" data-toggle="tab">راهنمای کار با وردپرس</a></li>
+                    <li role="presentation"><a href="#hostHelp" aria-controls="hostHelp" role="tab" data-toggle="tab">راهنمای مدیریت هاست</a></li>
+                    <li role="presentation"><a href="#other" aria-controls="other" role="tab" data-toggle="tab">سایر مطالب آموزشی</a></li>
+                </ul>
+                    
+                <!-- Tab panes -->
+                <div class="tab-content col-sm-10">
+                    <div role="tabpanel" class="tab-pane fade in active" id="domainHelp">
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="pull-left archive"><a href="#">آرشیو…</a></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="wpHelp">
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="pull-left archive"><a href="#">آرشیو…</a></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="hostHelp">
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="pull-left archive"><a href="#">آرشیو…</a></div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="other">
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="col-sm-3 col-xs-6"><article><img src="Tmp/images/index.jpg"/><p>آموزش ساخت شناسه در سایت ایرنیک</p></article></div>
+                        <div class="pull-left archive"><a href="#">آرشیو…</a></div>
+                    </div>
+                </div> 
+                <div class="clearfix"></div>
+            </div>
+        </section>
+        <section class="customer">
+            <h3 class="grayBorder">برخی از مشتریان</h3>
+            <div class="container">
+                <img src="Tmp/images/logos/basij.png" />
+                <img src="Tmp/images/logos/ershad.png" />
+                <img src="Tmp/images/logos/hamlonaql.png" />
+                <img src="Tmp/images/logos/honari.png" />
+                <img src="Tmp/images/logos/miras.png" />
+                <img src="Tmp/images/logos/mohitzist.png" />
+                <img src="Tmp/images/logos/naft.png" />
+                <img src="Tmp/images/logos/rahh.png" />
+                <img src="Tmp/images/logos/sepah.png" />
+                <img src="Tmp/images/logos/shahrdari.png" />
+
+            </div>
+        </section>
+        <section class="contact">
+                <div class="container">
+                    <div class="pull-right yellow">با ما در تماس باشید:</div>
+                    <div class="item pull-left" id="imail"> فروش: sale@arvidweb.com </div>
+                    <div class="item pull-left" id="imail"> پشتیبانی: support@arvidweb.com </div>
+                    <div class="item pull-left" id="iphone">+۹۸ ۹۱۶ ۸۵۰ ۱۵۴۶</div>
+                </div>
+        </section>
+        <footer>
+            <ul>
+                <li><a href="#">طراحی سایت</a></li>
+                <li><a href="#">میزبانی وب</a></li>
+                <li><a href="#">ثبت دامنه</a></li>
+                <li><a href="#">سامانه پیامکی</a></li>
+                <li><a href="#">نمایندگی هاست ایران</a></li>
+            </ul>
+        </footer>
+    </body>
+</HTML>
