@@ -76,6 +76,24 @@ body {
   position: absolute;
   top: 18px;
 }
+.wpService {
+  background: no-repeat bottom center #8F8F8F;
+  background-size: 100% auto;
+  text-align: center;
+}
+.wpService span {
+  background: #DD191A;
+  display: inline-block;
+  color: #FFFFFF;
+  font-size: 19px;
+  padding: 4px 35px 9px;
+  border-radius: 100px 100px 0 0;
+}
+.wpService .whiteShape {
+  position: relative;
+  z-index: 99;
+  margin-top: -24px;
+}
 .wordpress {
   color: #454545;
   font-size: 16px;
