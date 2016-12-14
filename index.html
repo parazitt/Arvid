@@ -45,11 +45,7 @@
                     $(this).tab('show')
                 }); 
                 $('.rocket img').smoove({offset:'40%'});
-                $("#linuxplus").hover(function(){
-                    var t = $(this).attr('src')
-                    $(this).attr('src', $(this).attr('data-h'))
-                    $(this).attr('data-h', t)
-                });
+
             });
             jQuery(window).resize(resized);
 
@@ -144,7 +140,7 @@
                     
                 </div>
                 <div class="col-sm-4 col-xs-6 pull-left fContainer">
-                    <img src="images/computer.png" />
+                    <img class="computer" src="images/computer.png" />
                 </div>
                 <div class="col-sm-8 col-xs-6 pull-left">
                     <ul class="colorButton">
@@ -227,7 +223,7 @@
                     <div role="tabpanel" class="tab-pane fade in active" id="home">
                         <div class="redLinux">
                             <div class="container">
-                                <img src="images/linux.png"  id="linuxplus" data-h="images/linuxplus.png" class="pull-left" />
+                                <img src="images/linux.png"  class="linuxLogo pull-left" data-h="images/linuxplus.png" class="pull-left" />
                                 <p>سرویس هاست لینوکس معمولی جهت ارائه خدمات به وب سایت هایی با بازدید و مصرف معمولی از منابع سرور است که کدنویسی و برنامه نویسی آن بر پایه سیستم عامل لینوکس و با زبان های برنامه نویسی php یا CGI یا پرل و ... می باشد. البته هاست لینوکس بدین معناست که فقط سیستم عامل نصب شده، روی سرور لینوکس است و هیچ ارتباطی با سیستم عامل کامپیوتر شخصی شما ندارد و چنانچه روی کامپیوتر شما ویندوز نصب باشد به راحتی می توانید از هاست لینوکس استفاده کنید. سرورهای این نوع سرویس، همگی در بستر شبکه ای دیتاسنتر هاست ایران در داخل ایران میزبانی می شوند و از کنترل پنل DirectAdmin در ایران استفاده می کند و وب سرویس آن آپاچی می باشد.</p>
                             </div>
                         </div>
@@ -315,7 +311,7 @@
         <section class="domain">
             <div class="fContainer grayBorder">
                 <div class="container">
-                    <h2>خدمات میزبانی وب</h2>
+                    <h2>جستجو ثبت دامنه</h2>
                     <ul>
                         <li><strong>.org</strong><p>45000 تومان</p></li>
                         <li><strong>.org</strong><p>45000 تومان</p></li>
@@ -420,19 +416,18 @@
             </div>
         </section>
         <section class="customer">
-            <h3 class="grayBorder">برخی از مشتریان</h3>
+            <h3>برخی از مشتریان</h3>
             <div class="container">
+                <img src="Tmp/images/logos/miras.png" />
+                <img src="Tmp/images/logos/rahh.png" />
+                <img src="Tmp/images/logos/shahrdari.png" />
+                <img src="Tmp/images/logos/honari.png" />
                 <img src="Tmp/images/logos/basij.png" />
+                <img src="Tmp/images/logos/naft.png" />
+                <img src="Tmp/images/logos/sepah.png" />
+                <img src="Tmp/images/logos/mohitzist.png" />
                 <img src="Tmp/images/logos/ershad.png" />
                 <img src="Tmp/images/logos/hamlonaql.png" />
-                <img src="Tmp/images/logos/honari.png" />
-                <img src="Tmp/images/logos/miras.png" />
-                <img src="Tmp/images/logos/mohitzist.png" />
-                <img src="Tmp/images/logos/naft.png" />
-                <img src="Tmp/images/logos/rahh.png" />
-                <img src="Tmp/images/logos/sepah.png" />
-                <img src="Tmp/images/logos/shahrdari.png" />
-
             </div>
         </section>
         <section class="contact">

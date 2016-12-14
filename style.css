@@ -52,8 +52,9 @@ body {
   float: right;
 }
 .navbar .navbar-nav li a {
-  color: #212121;
+  color: #1a1a1a;
   font-size: 16px;
+  padding: 14px 18px 15px;
 }
 .navbar .navbar-brand {
   height: auto;
@@ -68,9 +69,12 @@ body {
 .navbar .dropdown > a:after {
   background: url("images/arrow.png") no-repeat 5px center transparent;
   height: 16px;
-  width: 20px;
+  width: 19px;
   display: inline-block;
   content: "";
+  left: 0px;
+  position: absolute;
+  top: 18px;
 }
 .wordpress {
   color: #454545;
@@ -78,6 +82,9 @@ body {
 }
 .wordpress h2 {
   font-size: 20px;
+}
+.wordpress .computer {
+  margin-top: 43px;
 }
 .wordpress .colorButton {
   list-style: none inside none;
@@ -198,6 +205,7 @@ body {
 }
 .domain ul p {
   font-size: 20px;
+  text-align: center;
 }
 .domain .domainSearch {
   float: right;
@@ -227,7 +235,7 @@ body {
   background: #dc0000;
   border: 0 none;
   color: #ffffff;
-  width: 150px;
+  width: 107px;
   font-weight: bold;
 }
 .hosting .fContainer {
@@ -304,10 +312,13 @@ body {
 }
 .hosingTabs .tab-content .redLinux {
   background: #dd191a;
-  padding: 30px 0;
+  padding: 30px 30px;
   min-height: 250px;
   font-size: 16px;
   color: #ffffff;
+}
+.hosingTabs .tab-content .linuxLogo {
+  padding: 20px 20px 0;
 }
 .hosingTabs .tab-content .clouds {
   background: url("images/cloud.png") repeat-x top center;
@@ -445,7 +456,8 @@ body {
   text-align: center;
 }
 .customer {
-  padding-bottom: 15px;
+  border-top: 16px solid #ebebeb;
+  padding: 15px;
 }
 .customer .container {
   margin: auto;
@@ -457,7 +469,7 @@ body {
 .customer h3 {
   font-size: 29px;
   color: #535353;
-  margin: 0;
+  margin: 0 0 12px;
   text-align: center;
 }
 .customer h3:after {
@@ -484,7 +496,7 @@ body {
   color: #FFFFFF;
 }
 footer {
-  background: url("images/logos.png") no-repeat left center #181818;
+  background: url("images/logos.png") no-repeat 20px center #181818;
   min-height: 66px;
 }
 footer ul {
@@ -558,7 +570,15 @@ footer ul li a {
 .item#imail {
   background: url("images/mail.png") no-repeat center right transparent;
 }
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 @media (max-width: 767px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   .navbar .navbar-nav {
     float: none;
     width: 100%;
