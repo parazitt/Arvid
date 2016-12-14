@@ -1,19 +1,19 @@
 @font-face {
-  font-family: 'Yekan';
-  src: url('fonts/BYekan.eot');
-  src: url('fonts/BYekan.eot?#iefix') format('embedded-opentype'), url('fonts/Yekan.woff') format('woff'), url('fonts/BYekan.ttf') format('truetype');
+  font-family: Vazir;
+  src: url('fonts/Vazir.eot');
+  src: url('fonts/Vazir.eot?#iefix') format('embedded-opentype'), url('fonts/Vazir.woff') format('woff'), url('fonts/Vazir.ttf') format('truetype');
+  font-weight: normal;
 }
 * {
   padding: 0;
   margin: 0;
   direction: rtl;
-  /*font-family: yekan,tahoma,arial !important;*/
 }
 p {
   text-align: justify;
 }
 body {
-  font-family: yekan, tahoma, arial;
+  font-family: Vazir, tahoma, arial;
 }
 .redNav {
   background: #dd191a;
@@ -202,7 +202,7 @@ body {
 }
 .fContainer h2 {
   color: #ffffff;
-  font-family: yekan, tahoma, arial;
+  font-family: Vazir, tahoma, arial;
   font-size: 83px;
   text-shadow: 1px 1px 5px #222;
 }
@@ -313,7 +313,7 @@ body {
 }
 .hosingTabs .nav li a {
   font-size: 16px;
-  font-family: yekan;
+  font-family: Vazir;
   color: #ffffff;
   border-radius: 0;
   padding: 10px 30px;
